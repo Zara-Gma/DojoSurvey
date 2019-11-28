@@ -1,0 +1,80 @@
+@model User
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/77adfde77d.js" crossorigin="anonymous"></script>
+    <title>Dojo Survey</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Dojo Survey</h3>
+        <form action="/results" method="post">
+            <div class="input-group mb-3">
+                <label for="fullName">Full Name</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user-ninja" style="font-size:20px;"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Full Name" name="fullname">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <span class="text-muted">(Optional)</span>
+                <input type="email" name="email" id="email" class="form-control" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="location">Dojo location</label>
+                <select class="form-control" id="location" name="dojolocation">
+                    <option>San Jose</option>
+                    <option>Burbank</option>
+                    <option>Orange County</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="language">Favorite Language</label>
+                <select class="form-control" id="language" name="language">
+                    <option>C#</option>
+                    <option>Javascript</option>
+                    <option>Python</option>
+                    <option>Java</option>
+                    <option>Apex</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notes">Comments: </label>
+                <span class="text-muted">(Optional)</span>
+                <textarea class="form-control" id="notes" rows="3" name="comments"></textarea>
+                <small class="text-muted">Include any special requests you have for us!</small>
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-info btn-lg btn-block my-3">Submit</button>
+        </form>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
